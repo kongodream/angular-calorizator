@@ -1,0 +1,15 @@
+<div ng-controller="RationCtrl">
+    <h2 class="rationTitle">Рацион:</h2>
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="dish in rationDishes">
+            <span class="badge">{{dish.calories}}</span>
+                    <span>
+                        <a ng-src="{{dish}}"  ng-click="removeFromRation(dish)">
+                            {{FoodsListCtrl.containsObject(dish)}}
+                            <i class="fa fa-minus-circle fa-2x"></i>
+                        </a>
+                    </span>
+            {{dish.name}}
+        </li>
+    </ul>
+</div>

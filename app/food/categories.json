@@ -1,0 +1,36 @@
+[
+    {
+        "id": "first-dishes", 
+        "imageUrl": "img/foodTypes/first-dishes.jpg", 
+        "name": "Первые блюда"
+    }, 
+    {
+        "id": "second-dishes", 
+        "imageUrl": "img/foodTypes/second-dishes.jpg", 
+        "name": "Вторые блюда"
+    }, 
+    {
+        "id": "desserts", 
+        "imageUrl": "img/foodTypes/desserts.jpg", 
+        "name": "Десерты"
+
+    }, 
+	
+	{
+        "id": "bakery-products", 
+        "imageUrl": "img/foodTypes/bakery-products.jpg", 
+        "name": "Выпечка"
+    },
+	{
+        "id": "alcoholic-beverages", 
+        "imageUrl": "img/foodTypes/alcoholic-beverages.jpg", 
+        "name": "Алкогольные напитки"
+    },
+	{
+        "id": "beverages", 
+        "imageUrl": "img/foodTypes/beverages.jpg", 
+        "name": "Напитки"
+    }
+	
+	
+]

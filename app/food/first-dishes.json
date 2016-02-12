@@ -1,0 +1,100 @@
+{
+    "category": "Первые блюда",
+    "data": [
+        {
+            "imageUrl": "img/foodTypes/first-dishes.jpg",
+            "name": "Ароматный суп-харчо",
+            "protein": 2.4,
+            "triglyceride": 2.5,
+            "carbohydrate": 4.2,
+            "calories": 47
+        },
+        {
+            "imageUrl": "img/foodTypes/first-dishes.jpg",
+            "name": "Борщ со свининой",
+            "protein": 2.2,
+            "triglyceride": 2.2,
+            "carbohydrate": 3.8,
+            "calories": 42
+        },
+        {
+            "imageUrl": "img/foodTypes/first-dishes.jpg",
+            "name": "Борщ с говядиной",
+            "protein": 2.6,
+            "triglyceride": 1.5,
+            "carbohydrate": 1.4,
+            "calories": 29
+        },
+        {
+            "imageUrl": "img/foodTypes/first-dishes.jpg",
+            "name": "Быстрый картофельный суп",
+            "protein": 2.2,
+            "triglyceride": 3.3,
+            "carbohydrate": 3.7,
+            "calories": 52
+        },
+        {
+            "imageUrl": "img/foodTypes/first-dishes.jpg",
+            "name": "Вермишелевый суп с фрикадельками",
+            "protein": 2.6,
+            "triglyceride": 0.2,
+            "carbohydrate": 5.5,
+            "calories": 34
+        },
+        {
+            "imageUrl": "img/foodTypes/first-dishes.jpg",
+            "name": "Гороховый суп с фрикадельками",
+            "protein": 3.5,
+            "triglyceride": 2.5,
+            "carbohydrate": 6.2,
+            "calories": 59
+        },
+        {
+            "imageUrl": "img/foodTypes/first-dishes.jpg",
+            "name": "Гречневый суп с курицей",
+            "protein": 3.4,
+            "triglyceride": 0.7,
+            "carbohydrate": 5.1,
+            "calories": 39
+        },
+        {
+            "imageUrl": "img/foodTypes/first-dishes.jpg",
+            "name": "Куриный бульон домашний",
+            "protein": 3.9,
+            "triglyceride": 2.3,
+            "carbohydrate": 0.7,
+            "calories": 39
+        },
+        {
+            "imageUrl": "img/foodTypes/first-dishes.jpg",
+            "name": "Рассольник домашний",
+            "protein": 1.6,
+            "triglyceride": 0.5,
+            "carbohydrate": 9.9,
+            "calories": 48
+        },
+        {
+            "imageUrl": "img/foodTypes/first-dishes.jpg",
+            "name": "Рассольник в мультиварке",
+            "protein": 2.5,
+            "triglyceride": 1.9,
+            "carbohydrate": 8.1,
+            "calories": 58
+        },
+        {
+            "imageUrl": "img/foodTypes/first-dishes.jpg",
+            "name": "Рассольник со свининой",
+            "protein": 2.2,
+            "triglyceride": 3.0,
+            "carbohydrate": 6.1,
+            "calories": 59
+        }
+    ]
+}
+
+
+
+
+
+
+

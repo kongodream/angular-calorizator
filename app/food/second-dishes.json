@@ -1,0 +1,93 @@
+{
+    "category": "Вторые блюда",
+    "data": [
+        {
+            "imageUrl": "img/foodTypes/first-dishes.jpg",
+            "name": "Биточки Диетические",
+            "protein": 14.1,
+            "triglyceride": 4.4,
+            "carbohydrate": 13.4,
+            "calories": 149
+        },
+        {
+            "imageUrl": "img/foodTypes/first-dishes.jpg",
+            "name": "Голубцы",
+            "protein": 4.7,
+            "triglyceride": 5.2,
+            "carbohydrate": 8.0,
+            "calories": 93
+        },
+        {
+            "imageUrl": "img/foodTypes/first-dishes.jpg",
+            "name": "Гречаники",
+            "protein": 10.6,
+            "triglyceride": 17.2,
+            "carbohydrate": 21.1,
+            "calories": 280
+        },
+        {
+            "imageUrl": "img/foodTypes/first-dishes.jpg",
+            "name": "Картофель на пару",
+            "protein": 1.9,
+            "triglyceride": 7.5,
+            "carbohydrate": 16.1,
+            "calories": 136
+        },
+        {
+            "imageUrl": "img/foodTypes/first-dishes.jpg",
+            "name": "Картофель фри",
+            "protein": 1.8,
+            "triglyceride": 11.4,
+            "carbohydrate": 16.0,
+            "calories": 170
+        },
+        {
+            "imageUrl": "img/foodTypes/first-dishes.jpg",
+            "name": "Гороховый суп с фрикадельками",
+            "protein": 3.5,
+            "triglyceride": 2.5,
+            "carbohydrate": 6.2,
+            "calories": 59
+        },
+        {
+            "imageUrl": "img/foodTypes/first-dishes.jpg",
+            "name": "Котлеты по-киевски",
+            "protein": 17.2,
+            "triglyceride": 15.6,
+            "carbohydrate": 4.5,
+            "calories": 233
+        },
+        {
+            "imageUrl": "img/foodTypes/first-dishes.jpg",
+            "name": "Котлеты куриные",
+            "protein": 16.2,
+            "triglyceride": 3.4,
+            "carbohydrate": 12.0,
+            "calories": 144
+        },
+        {
+            "imageUrl": "img/foodTypes/first-dishes.jpg",
+            "name": "Куриные паровые котлеты",
+            "protein": 10.5,
+            "triglyceride": 10.8,
+            "carbohydrate": 1.9,
+            "calories": 147
+        },
+        {
+            "imageUrl": "img/foodTypes/first-dishes.jpg",
+            "name": "Манная каша в мультиварке",
+            "protein": 3.1,
+            "triglyceride": 5.1,
+            "carbohydrate": 13.6,
+            "calories": 111
+        },
+        {
+            "imageUrl": "img/foodTypes/first-dishes.jpg",
+            "name": "Мясо по-французски",
+            "protein": 7.6,
+            "triglyceride": 8.6,
+            "carbohydrate": 9.6,
+            "calories": 144
+        }
+    ]
+}

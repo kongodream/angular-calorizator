@@ -1,0 +1,25 @@
+{
+  "name": "angular-calorizator",
+  "homepage": "",
+  "authors": [
+    "Ivan Lytvynenko"
+  ],
+  "description": "Program for summation of calories in food.",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.5.0",
+    "bootstrap": "^3.3.6",
+    "font-awesome": "fontawesome#^4.5.0",
+    "angular-route": "^1.5.0",
+    "angular-resource": "^1.5.0"
+  }
+}
