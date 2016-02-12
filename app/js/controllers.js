@@ -2,8 +2,8 @@ var calorizatorControllers = angular.module('calorizatorControllers', []);
 
 var ration = [];
 
-calorizatorControllers.controller('SensorsCtrl',  ['$scope',
-    function($scope) {
+calorizatorControllers.controller('SensorsCtrl', ['$scope',
+    function ($scope) {
         $scope.activities = [
             {value: 1.25, description: 'сидячий образ жизни, сидячая работа'},
             {value: 1.35, description: 'легкая активность'},
@@ -12,9 +12,9 @@ calorizatorControllers.controller('SensorsCtrl',  ['$scope',
             {value: 1.95, description: 'экстремально-высокая активность'},
         ];
 
-        $scope.amountOfCalories = function() {
+        $scope.amountOfCalories = function () {
             var caloriesAmount = 0;
-            for(var i = 0; i < ration.length; i++) {
+            for (var i = 0; i < ration.length; i++) {
                 caloriesAmount += ration[i].calories;
             }
             return caloriesAmount;
@@ -22,20 +22,20 @@ calorizatorControllers.controller('SensorsCtrl',  ['$scope',
 
         $scope.user = {
             activity: {
-                value:0
+                value: 0
             }
         };
 
-        $scope.recommendedAmountOfCalories = function() {
+        $scope.recommendedAmountOfCalories = function () {
             var user = $scope.user;
             var caloriesAmount;
-            if(user.sex == 'man') {
+            if (user.sex == 'man') {
                 caloriesAmount = recommendedForMan(user);
             } else {
                 caloriesAmount = recommendedForWoman(user);
             }
             caloriesAmount = Number((caloriesAmount * user.activity.value).toFixed(0));
-            return  caloriesAmount ? caloriesAmount : 0;
+            return caloriesAmount ? caloriesAmount : 0;
         };
 
         function recommendedForWoman(params) {
@@ -50,33 +50,33 @@ calorizatorControllers.controller('SensorsCtrl',  ['$scope',
 
     }]);
 
-calorizatorControllers.controller('CategoriesListCtrl',  ['$scope', 'Category',
-    function($scope, Category) {
+calorizatorControllers.controller('CategoriesListCtrl', ['$scope', 'Category',
+    function ($scope, Category) {
         $scope.foodTypes = Category.query();
-}]);
+    }]);
 
 calorizatorControllers.controller('FoodsListCtrl', ['$scope', '$routeParams', '$http',
-    function($scope, $routeParams, $http) {
+    function ($scope, $routeParams, $http) {
         //$scope.dishes = Category.query({categoryId : $routeParams.categoryId});
-        $http.get('food/' + $routeParams.categoryId + '.json').success(function(response) {
+        $http.get('food/' + $routeParams.categoryId + '.json').success(function (response) {
             $scope.categoryTitle = response.category;
             $scope.dishes = response.data;
         });
 
-        $scope.addToRation = function(dish) {
+        $scope.addToRation = function (dish) {
             ration.push(dish);
         };
 
 
         $scope.containsObject = containsObject;
-}]);
+    }]);
 
 calorizatorControllers.controller('RationCtrl', ['$scope',
-    function($scope) {
+    function ($scope) {
         $scope.rationDishes = ration;
 
-        $scope.removeFromRation = function(dish) {
-            if(containsObject(dish)) {
+        $scope.removeFromRation = function (dish) {
+            if (containsObject(dish)) {
                 var index = ration.indexOf(dish);
                 ration.splice(index, 1);
             }
