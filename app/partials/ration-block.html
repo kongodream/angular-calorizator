@@ -1,5 +1,22 @@
 <div ng-controller="RationCtrl">
-    <h2 class="rationTitle">Рацион:</h2>
+    <h2 class="panel-title-fd ng-binding">Твой рацион</h2>
+
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-success">Dapibus ac facilisis in</li>
+        <li class="list-group-item list-group-item-warning">
+            <span class="badge">{{amountOfProtein()}}</span>
+            Белки
+        </li>
+        <li class="list-group-item list-group-item-warning">
+            <span class="badge">{{amountOfTriglyceride()}}</span>
+            Жиры
+        </li>
+        <li class="list-group-item list-group-item-warning">
+            <span class="badge">{{amountOfCarbohydrate()}}</span>
+            Углеводы
+        </li>
+    </ul>
+
     <ul class="list-group">
         <li class="list-group-item" ng-repeat="dish in rationDishes">
             <span class="badge">{{dish.calories}}</span>

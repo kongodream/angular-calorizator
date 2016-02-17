@@ -1,9 +1,8 @@
 var calorizatorControllers = angular.module('calorizatorControllers', []);
 
-var ration = [];
-
-calorizatorControllers.controller('SensorsCtrl', ['$scope',
-    function ($scope) {
+calorizatorControllers.controller('SensorsCtrl', ['$scope', 'Ration',
+    function ($scope, Ration) {
+        $scope.ration = Ration.ration;
         $scope.activities = [
             {value: 1.25, description: 'сидячий образ жизни, сидячая работа'},
             {value: 1.35, description: 'легкая активность'},
@@ -12,13 +11,7 @@ calorizatorControllers.controller('SensorsCtrl', ['$scope',
             {value: 1.95, description: 'экстремально-высокая активность'},
         ];
 
-        $scope.amountOfCalories = function () {
-            var caloriesAmount = 0;
-            for (var i = 0; i < ration.length; i++) {
-                caloriesAmount += ration[i].calories;
-            }
-            return caloriesAmount;
-        };
+        $scope.amountOfCalories = Ration.amountOfCalories;
 
         $scope.user = {
             activity: {
@@ -53,50 +46,38 @@ calorizatorControllers.controller('SensorsCtrl', ['$scope',
 calorizatorControllers.controller('CategoriesListCtrl', ['$scope', 'Category',
     function ($scope, Category) {
         $scope.foodTypes = Category.query();
-    }]);
+}]);
 
-calorizatorControllers.controller('FoodsListCtrl', ['$scope', '$routeParams', '$http',
-    function ($scope, $routeParams, $http) {
-        //$scope.dishes = Category.query({categoryId : $routeParams.categoryId});
+calorizatorControllers.controller('FoodsListCtrl', ['$scope', '$routeParams', '$http', 'Ration',
+    function ($scope, $routeParams, $http, Ration) {
         $http.get('food/' + $routeParams.categoryId + '.json').success(function (response) {
             $scope.categoryTitle = response.category;
             $scope.dishes = response.data;
         });
 
-        $scope.addToRation = function (dish) {
-            ration.push(dish);
+        $scope.addToRation = Ration.addToRation;
+        $scope.removeFromRation = Ration.removeFromRation;
+}]);
+
+calorizatorControllers.controller('RationCtrl', ['$scope', 'Ration',
+    function ($scope, Ration) {
+        $scope.rationDishes = Ration.ration;
+        $scope.removeFromRation = Ration.removeFromRation;
+
+        $scope.amountOfProtein = function() {
+            return Ration.amountOf('protein');
         };
 
-
-        $scope.containsObject = containsObject;
-    }]);
-
-calorizatorControllers.controller('RationCtrl', ['$scope',
-    function ($scope) {
-        $scope.rationDishes = ration;
-
-        $scope.removeFromRation = function (dish) {
-            if (containsObject(dish)) {
-                var index = ration.indexOf(dish);
-                ration.splice(index, 1);
-            }
+        $scope.amountOfTriglyceride = function() {
+            return Ration.amountOf('triglyceride');
         };
 
-    }]);
+        $scope.amountOfCarbohydrate = function() {
+            return Ration.amountOf('carbohydrate');
+        };
+}]);
 
 
-function containsObject(obj) {
-    for (var i = 0; i < ration.length; i++) {
-        if (angular.equals(ration[i], obj)) {
-            return true;
-        }
-    }
-    return false;
-}
-
-function addToRation(dish) {
-    ration.push(dish);
-}
 
 
 

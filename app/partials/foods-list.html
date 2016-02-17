@@ -45,10 +45,16 @@
                         </thead>
                         <tr ng-repeat="dish in dishes | filter:searchQuery">
                             <td class="text-center">
-                                <div ng-init="containsObj=containsObject(dish)" ng-hide="containsObj == true">
+                                <div ng-hide="dish.added">
                                     <a ng-src="{{dish}}"
-                                       ng-click="addToRation(dish); containsObj=containsObject(dish);">
+                                       ng-click="addToRation(dish)">
                                         <i class="fa fa-plus-circle fa-2x"></i>
+                                    </a>
+                                </div>
+                                <div ng-hide="!dish.added">
+                                    <a ng-src="{{dish}}"
+                                       ng-click="removeFromRation(dish)">
+                                        <i class="fa fa-minus-circle fa-2x"></i>
                                     </a>
                                 </div>
                             </td>

@@ -1,7 +1,7 @@
 var calorizatorApp = angular.module('calorizatorApp', [
     'ngRoute',
-    'phonecatServices',
-    'calorizatorControllers'
+    'calorizatorControllers',
+    'calorizatorServices'
 ]);
 
 calorizatorApp.config(['$routeProvider',
